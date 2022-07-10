@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+  <script src="./index.js" defer></script>
+
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body class="theme-1">
+  <main class="main">
+    <div class="calc-header">
+      <span class="calc-title">calc</span>
+      <div class="toggle-container">
+        <input type="checkbox" name="toggle-1" id="toggle-1">
+        <label for="toggle-1">1</label>
+        <input type="checkbox" name="toggle-2" id="toggle-2">
+        <label for="toggle-2">2</label>
+        <input type="checkbox" name="toggle-3" id="toggle-3">
+        <label for="toggle-3">3</label>
+      </div>
+    </div>
+    <div class="calc-screen">
+      <input type="number" name="num" id="num" disabled class="screen" onKeyDown="return false">
+      <label for="num" class="number-formatted-wrapper"></label>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-sm btn-number btn-common" data-number="7">7</button>
+      <button class="btn btn-sm btn-number btn-common" data-number="8">8</button>
+      <button class="btn btn-sm btn-number btn-common" data-number="9">9</button>
+      <button class="btn btn-sm btn-operator btn-del">DEL</button>
+  
+      <button class="btn btn-sm btn-number btn-common" data-number="4">4</button>
+      <button class="btn btn-sm btn-number btn-common" data-number="5">5</button>
+      <button class="btn btn-sm btn-number btn-common" data-number="6">6</button>
+      <button class="btn btn-sm btn-common btn-operation" data-operation="+">+</button>
+  
+      <button class="btn btn-sm btn-number btn-common" data-number="1">1</button>
+      <button class="btn btn-sm btn-number btn-common" data-number="2">2</button>
+      <button class="btn btn-sm btn-number btn-common" data-number="3">3</button>
+      <button class="btn btn-sm btn-common btn-operation" data-operation="-">-</button>
+  
+      <button class="btn btn-sm btn-common btn-dot">.</button>
+      <button class="btn btn-sm btn-number btn-common" data-number="0">0</button>
+      <button class="btn btn-sm btn-common btn-operation" data-operation="/">/</button>
+      <button class="btn btn-sm btn-common btn-operation" data-operation="*">x</button>
+  
+      <button class="btn btn-lg btn-operator btn-reset">RESET</button>
+      <button class="btn btn-lg btn-equals">=</button>
+    </div>
+  </main>
+  <footer class="attribution">
+    <a target="_blank" href="https://www.instagram.com/christopheriilajom">Coded by Christopher</a>
+  </footer>
+</body>
+</html>

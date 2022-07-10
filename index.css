@@ -1,0 +1,513 @@
+:root {
+    --ff-league: 'League Spartan', sans-serif;
+    --number-size: 32px;
+
+    /* Theme 1 - BG */
+    --t1-main-bg: hsl(222, 26%, 31%);
+    --t1-keypad-bg: hsl(223, 31%, 20%);
+    --t1-screen-bg: hsl(224, 36%, 15%);
+
+    /* Theme 1 - Keys */
+    --t1-key-bg: hsl(225, 21%, 49%);
+    --t1-key-shadow: hsl(224, 28%, 35%);
+
+    --t1-red-toggle: hsl(6, 63%, 50%);
+    --t1-dark-red-shadow: hsl(6, 70%, 34%);
+
+    --t1-light-gray-bg: hsl(30, 25%, 89%); /* Light grayish orange (key background) */
+    --t1-grayish-orange-shadow: hsl(28, 16%, 65%); /*(key shadow)*/
+
+    /* Theme 1 - Text */
+    --t1-very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --t1-white: hsl(0, 0, 100%);
+
+
+    /* Theme 2 - BG */
+    --t2-main-bg: hsl(0, 0%, 90%);
+    --t2-keypad-bg: hsl(0, 5%, 81%);
+    --t2-screen-bg: hsl(0, 0%, 93%);
+
+    /* Theme 2 - Keys */
+    --t2-key-bg: hsl(185, 42%, 37%);
+    --t2-key-shadow: hsl(185, 58%, 25%);
+
+    --t2-red-toggle: hsl(25, 98%, 40%);
+    --t2-dark-red-shadow: hsl(25, 99%, 27%);
+
+    --t2-light-gray-bg: hsl(45, 7%, 89%); /* Light grayish orange (key background) */
+    --t2-grayish-orange-shadow: hsl(35, 11%, 61%); /*(key shadow)*/
+
+    /* Theme 2 - Text */
+    --t2-very-dark-grayish-blue: hsl(60, 10%, 19%);
+    --t2-white: hsl(0, 0, 100%);
+
+    /* Theme 3 - BG */
+    --t3-main-bg: hsl(268, 75%, 9%);
+    --t3-keypad-bg: hsl(268, 71%, 12%);
+    --t3-screen-bg: hsl(268, 71%, 12%);
+
+    /* Theme 3 - Keys */
+    --t3-key-bg: hsl(281, 89%, 26%);
+    --t3-key-shadow: hsl(285, 91%, 52%);
+
+    --t3-red-toggle: hsl(176, 100%, 44%);
+    --t3-dark-red-shadow: hsl(177, 92%, 70%);
+
+    --t3-light-gray-bg: hsl(268, 47%, 21%); /* Light grayish orange (key background) */
+    --t3-grayish-orange-shadow: hsl(290, 70%, 36%); /*(key shadow)*/
+
+    /* Theme 3 - Text */
+    --t3-very-dark-grayish-blue: hsl(198, 20%, 13%);
+    --t3-light-yellow: hsl(52, 100%, 62%);
+    --t3-white: hsl(0, 0, 100%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-league);
+}
+
+* {
+    transition: color .5s;
+}
+
+body {
+    transition: background-color .5s;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+/* Body Theme */
+
+.theme-1 {
+    background-color: var(--t1-main-bg);
+}
+
+/* .theme-1 .keypad-bg {
+    background-color: var(--t1-keypad-bg);
+}
+
+.theme-1 .screen-bg {
+    background-color: var(--t1-screen-bg);
+} */
+
+.theme-2 {
+    background-color: var(--t2-main-bg);
+}
+
+/* .theme-2 .keypad-bg {
+    background-color: var(--t2-keypad-bg);
+}
+
+.theme-2 .screen-bg {
+    background-color: var(--t2-screen-bg);
+} */
+
+.theme-3 {
+    background-color: var(--t3-main-bg);
+}
+/* 
+.theme-3 .keypad-bg {
+    background-color: var(--t3-keypad-bg);
+}
+
+.theme-3 .screen-bg {
+    background-color: var(--t3-screen-bg);
+} */
+
+/* Buttons */
+
+.btn {
+    outline: none;
+    border-radius: 5px;
+    border-color: transparent;
+    width: 100%;
+    font-size: var(--number-size);
+    padding: 1.5rem 0;
+    cursor: pointer;
+    border-bottom-width: 4px;
+    font-weight: 700;
+}
+
+.btn:hover {
+    transition: background-color .5s, opacity .5s;
+}
+
+.btn-operator {
+    font-size: 1.5rem;
+}
+
+.btn-equals {
+    font-size: 1.35rem;
+}
+
+body.theme-1 .btn-common {
+    background-color: var(--t1-light-gray-bg);
+    border-bottom-color: var(--t1-grayish-orange-shadow);
+    color: var(--t1-very-dark-grayish-blue);
+}
+
+body.theme-1 .btn-common:hover {
+    background-color: white;
+}
+
+body.theme-1 .btn-operator {
+    border-bottom-color: var(--t1-key-shadow);
+    background-color: var(--t1-key-bg);
+    color: white;
+}
+
+body.theme-1 .btn-operator:hover {
+    background-color: hsl(224deg 52% 76%);
+}
+
+body.theme-1 .btn-equals {
+    border-bottom-color: var(--t1-dark-red-shadow);
+    background-color: var(--t1-red-toggle);
+    color: white;
+}
+
+body.theme-1 .btn-equals:hover {
+    background-color: hsl(6deg 93% 67%);
+}
+
+body.theme-2 .btn-common {
+    background-color: var(--t2-light-gray-bg);
+    border-bottom-color: var(--t2-grayish-orange-shadow);
+    color: var(--t2-very-dark-grayish-blue);
+}
+
+body.theme-2 .btn-common:hover {
+    background-color: white;
+}
+
+body.theme-2 .btn-operator {
+    border-bottom-color: var(--t2-key-shadow);
+    background-color: var(--t2-key-bg);
+    color: white;
+}
+
+body.theme-2 .btn-operator:hover {
+    border-bottom-color: hsl(185deg 41% 56%);
+}
+
+body.theme-2 .btn-equals {
+    border-bottom-color: var(--t2-dark-red-shadow);
+    background-color: var(--t2-red-toggle);
+    color: white;
+}
+
+body.theme-2 .btn-equals:hover {
+    background-color: hsl(25deg 100% 61%);
+}
+
+body.theme-3 .btn-common {
+    background-color: var(--t3-light-gray-bg);
+    border-bottom-color: var(--t3-grayish-orange-shadow);
+    color: var(--t3-light-yellow);
+}
+
+body.theme-3 .btn-common:hover {
+    background-color: hsl(268deg 54% 44%);
+}
+
+body.theme-3 .btn-operator {
+    border-bottom-color: var(--t3-key-shadow);
+    background-color: var(--t3-key-bg);
+    color: white;
+}
+
+body.theme-3 .btn-operator:hover {
+    background-color: hsl(280deg 56% 44%);
+}
+
+body.theme-3 .btn-equals {
+    border-bottom-color: var(--t3-red-toggle);
+    background-color: var(--t3-dark-red-shadow);
+    color: var(--t3-very-dark-grayish-blue);
+}
+
+body.theme-3 .btn-equals:hover {
+    background-color: hsl(177deg 98% 79%);
+}
+
+/* Toggle */
+
+.toggle-container {
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: .4rem;
+    height: 2.5rem;
+    position: relative;
+    font-size: 1.15rem;
+    width: 50px;
+}
+
+.toggle-container::before {
+    content: 'theme';
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    position: absolute;
+    left: -5rem;
+}
+
+.theme-1 .toggle-container {
+    background-color: var(--t1-keypad-bg);
+    color: white;
+}
+
+.theme-1 .toggle-container::before {
+    color: white;
+}
+
+.theme-2 .toggle-container {
+    background-color: var(--t2-keypad-bg);
+}
+
+.theme-2 .toggle-container::before {
+    color: var(--t2-very-dark-grayish-blue);
+}
+
+.theme-3 .toggle-container {
+    background-color: var(--t3-keypad-bg);
+}
+
+.theme-3 .toggle-container::before {
+    color: var(--t3-light-yellow);
+}
+
+input[type='checkbox'] {
+    opacity: 0;
+    position: absolute;
+    left: -9000px;
+}
+
+/* input[type='checkbox']:checked + label {
+    color: red;
+} */
+
+input[type='checkbox'] + label {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: absolute;
+    color: black;
+    row-gap: .6em;
+}
+
+.theme-1 input[type='checkbox'] + label {
+    color: var(--t1-white);
+}
+
+.theme-2 input[type='checkbox'] + label {
+    color: var(--t2-very-dark-grayish-blue);
+}
+
+.theme-3 input[type='checkbox'] + label {
+    color: var(--t3-light-yellow);
+}
+
+input[type='checkbox'] + label:nth-of-type(1) {
+    top: -13px;
+    left: 2px;
+}
+
+input[type='checkbox'] + label:nth-of-type(2) {
+    top: -13px;
+    left: 16px;
+}
+
+input[type='checkbox'] + label:nth-of-type(3) {
+    top: -13px;
+    left: 30px;
+}
+
+input[type='checkbox'] + label::before {
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+input[type="checkbox"]:checked + label::before {
+    opacity: 1;
+}
+
+/* Change theme */
+.theme-1 input[type="checkbox"]:checked + label::before {
+    background-color: var(--t1-red-toggle);
+}
+
+.theme-2 input[type="checkbox"]:checked + label::before {
+    background-color: var(--t2-red-toggle);
+}
+
+.theme-3 input[type="checkbox"]:checked + label::before {
+    background-color: var(--t3-red-toggle);
+}
+
+/* Screen */
+
+.calc-screen {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.calc-screen .number-formatted-wrapper {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 4rem;
+    text-align: end;
+    /* -moz-appearance:textfield; */
+    width: 100%;
+}
+
+.calc-screen input[type='number'] {
+    position: absolute;
+    left: -9000px;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.theme-1 .calc-screen {
+    background-color: var(--t1-screen-bg);
+}
+
+.theme-1 .calc-screen label {
+    color: white;
+}
+
+.theme-2 .calc-screen {
+    background-color: var(--t2-screen-bg);
+}
+
+.theme-2 .calc-screen label {
+    color: var(--t2-very-dark-grayish-blue);
+}
+
+.theme-3 .calc-screen {
+    background-color: var(--t3-screen-bg);
+}
+
+.theme-3 .calc-screen label {
+    color: var(--t3-light-yellow);
+}
+
+/* main */
+
+.main {
+    display: grid;
+    row-gap: 2rem;
+    max-width: 340px;
+    width: 100%;
+    grid-template-rows: 50px 70px auto;
+}
+
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc-title {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.theme-1 .calc-title {
+    color: white;
+}
+
+.theme-2 .calc-title {
+    color: var(--t2-very-dark-grayish-blue);
+}
+
+.theme-3 .calc-title {
+    color: var(--t3-light-yellow);
+}
+
+/* Buttons */
+
+.buttons {
+    width: 100%;
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    border-radius: 1rem;
+    justify-content: center;
+}
+
+.theme-1 .buttons {
+    background-color: var(--t1-keypad-bg);
+}
+
+.theme-2 .buttons {
+    background-color: var(--t2-keypad-bg);
+}
+
+.theme-3 .buttons {
+    background-color: var(--t3-keypad-bg);
+}
+
+.buttons .btn-lg.btn-operator {
+    grid-column: 1 / 3;
+}
+
+.buttons .btn-equals {
+    grid-column: 3 / 5;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.theme-1 footer {
+    color: white;
+}
+
+.theme-2 footer {
+    color: var(--t2-very-dark-grayish-blue);
+}
+
+.theme-3 footer {
+    color: var(--t3-light-yellow);
+}
+footer a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: var(--ff-league);
+}
+
+footer a:hover, footer a:active {
+    color: #feae2e;
+    transition: color .5s;
+}
